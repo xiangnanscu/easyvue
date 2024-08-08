@@ -1,11 +1,11 @@
 {
-  "name": "create-vue",
+  "name": "create-easyvue",
   "version": "3.10.4",
   "description": "An easy way to start a Vue project",
   "type": "module",
-  "packageManager2": "pnpm@9.6.0",
+  "packageManager": "pnpm@9.6.0",
   "bin": {
-    "create-vue": "outfile.cjs"
+    "create-easyvue": "outfile.cjs"
   },
   "files": [
     "locales",
@@ -17,6 +17,7 @@
   },
   "scripts": {
     "lab": "pnpm build && ./outfile.cjs",
+    "diff": "npx -y cpgit vuejs/create-vue . -f",
     "prepare": "husky",
     "format": "prettier --write .",
     "build": "zx ./scripts/build.mjs",
@@ -24,19 +25,19 @@
     "pretest": "run-s build snapshot",
     "test": "zx ./scripts/test.mjs",
     "test:unit": "vitest",
-    "prepublishOnly": "zx ./scripts/prepublish.mjs"
+    "prepublishOnly": "pnpm build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vuejs/create-vue.git"
+    "url": "git+https://github.com/xiangnanscu/create-easyvue.git"
   },
   "keywords": [],
   "author": "Haoqun Jiang <haoqunjiang+npm@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/vuejs/create-vue/issues"
+    "url": "https://github.com/xiangnanscu/create-easyvue/issues"
   },
-  "homepage": "https://github.com/vuejs/create-vue#readme",
+  "homepage": "https://github.com/xiangnanscu/create-easyvue#readme",
   "devDependencies": {
     "@tsconfig/node20": "^20.1.4",
     "@types/eslint": "^9.6.0",
