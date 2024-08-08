@@ -19,8 +19,10 @@ export default function getData() {
       },
       {
         id: 'unplugin-vue-router',
-        importer: `import VueRouter from "unplugin-vue-router/vite";import { VueRouterAutoImports } from 'unplugin-vue-router'`,
-        initializer: `VueRouter({
+        importer: `import VueRouter from "unplugin-vue-router/vite";\nimport { VueRouterAutoImports } from 'unplugin-vue-router'`,
+        initializer: `// https://uvr.esm.is/guide/configuration.html
+    // https://uvr.esm.is/introduction.html#from-scratch
+    VueRouter({
       routesFolder: ["./src/views"],
       // allowed extensions to be considered as routes
       extensions: [".vue"],
