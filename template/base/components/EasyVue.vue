@@ -1,3 +1,12 @@
+<script setup>
+const framework = utils.capitalize('vue')
+const title = process.env.TITLE
+</script>
+
 <template>
-  <h1>Easy vue: opinioned vite + vue3 project</h1>
+  <div>
+    <h1> {{ title }}</h1>
+    <h2>Auto component and route worked!</h2>
+    <h2 v-if="framework === 'Vue'">Global export utils worked!</h2>
+  </div>
 </template>

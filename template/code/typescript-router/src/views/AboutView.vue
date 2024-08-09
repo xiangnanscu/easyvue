@@ -1,9 +1,6 @@
-<script setup>
-const framework = process.env.ENV3
-</script>
 <template>
   <div class="about">
-    <h1>This is an about page: {{ framework }}</h1>
+    <h1>This is an about page</h1>
   </div>
 </template>
 
